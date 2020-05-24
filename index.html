@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +8,75 @@
   <link rel="stylesheet" href="normalize.css" type="text/css">
   <link rel="stylesheet" href="style.css" type="text/css">
 </head>
+
 <body>
   <main class="main">
     <h1 class="header">Mój formularz</h1>
-    <form action="http://dev.cotenfrontend.pl/"   method="POST" class="">
+    <form method="POST" action="http://dev.cotenfrontend.pl/">
+      <fieldset class="personal">
+        <legend class="personal__data">Personal data</legend>
+        <p class="personal__name">
+          <label for="name">Imię: </label>
+          <input class="input" type="text" id="name" name="name">
+        </p>
+        <p class="personal__surname">
+          <label for="surname">Nazwisko: </label>
+          <input class="input" type="text" id="surname" name="surname">
+        </p>
+        <p class="personal__mail">
+          <label for="mail">e-mail: </label>
+          <input class="input" type="email" name="e-mail" id="mail">
+        </p>
+        <p class="personal__date">
+          <label for="birth-date">Data urodzenia: </label>
+          <input class="input " type="date" name="birth-date" id="birth-date" placeholder="yyyy-mm-dd" >
+        </p>
+        <p class="personal__gender--gender">Płeć:</p>
+        <div class="personal__gender--both">
+          <p class="personal__gender ">
+            <input class="input personal__gender--input " type="radio" id="man" name="gender" value="man">
+            <label class="personal__gender--label " for="man">Mężczyzna</label>
+          </p>
+          <p class="personal__gender ">
+            <input class="input personal__gender--input " type="radio" id="woman" name="gender" value="woman">
+            <label class="personal__gender--label " for="woman">Kobieta</label>
+          </p>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Inne</legend>
+      <fieldset class="devices">
+        <legend >Na jakich urządzeniach korzystasz z Internetu?</legend>
+        <p class="devices__check">
+          <input id="personal-computer" type="checkbox" name="personal-computer">
+          <label for="personal-computer">komputer stacjonarny</label>
+        </p>
+        <p class="devices__check">
+          <input id="laptop" type="checkbox" name="laptop">
+          <label for="laptop">laptop</label>
+        </p>
+        <p class="devices__check">
+          <input id="tablet" type="checkbox" name="tablet">
+          <label for="tablet">tablet</label>
+        </p>
+        <p class="devices__check">
+          <input id="cell-phone" type="checkbox" name="cell-phone">
+          <label for="cell-phone">telefon komórkowy (np. smartfon)</label>
+        </p>
+        <p class="devices__check">
+          <input class="devices__check--js" id="other-device" type="checkbox" name="other-device" >
+          <label for="other-device">na innym urządzeniu, jakim?</label>
+          <input class="devices__check--other " id="other-device" type="text" name="other-device" placeholder="Wymień urządzenia...">
+      </fieldset>
+    </fieldset>
+    <p>
+      <input type="submit">
+    </p>
     </form>
+    
+
   </main>
+  <script src="main.js"></script>
 </body>
+
 </html>

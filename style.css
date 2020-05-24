@@ -1,12 +1,73 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 body {
   background-color: #08aeea;
   background-image: linear-gradient(0deg, #08aeea 0%, #2af598 100%);
   height: 100vh;  
+  display: flex;
+  justify-content: center;
+}
+
+.devices{
+  border-style: none;
+}
+.devices__check{
+    margin:5px 0;
+}
+.devices__check--other{
+  display: none;
+  margin-top: 10px;
+}
+.devices__check--other--js{
+  display: block;
 }
 .header{
   color:purple;
 }
-.main{
-  display: flex;
-  justify-content: center;
+.input{
+  margin-left: 16px;
 }
+
+.main{
+}
+.personal__name, .personal__surname, .personal__mail, .personal__date, .personal__gender--gender, .personal__gender{
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.personal__gender--gender{
+  margin:0px;
+  display: inline-block;
+  width: auto;
+  
+}
+.personal{
+  padding-bottom: 25px;
+}
+.personal__gender{
+ margin: 0;
+ display: flex;
+  justify-content: flex-start;
+}
+.personal__gender--input{
+
+}
+.personal__gender--label{
+}
+.personal__gender--both{
+  /* width: 8px; */
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  display: inline-block;
+  position: relative;
+  top: 10px;
+}
+
