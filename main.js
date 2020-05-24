@@ -1,6 +1,16 @@
-const checkBox =document.querySelector(`.devices__check--js`);
+const checkBox = document.querySelector(`.devices__check--js`);
 
 
-checkBox.addEventListener("click",()=>{
-  document.querySelector(`.devices__check--other`).classList.toggle(`devices__check--other--js`);
-})
+console.log(document.querySelector(`.devices__check--js:checked`));
+
+checkBox.addEventListener("click", () => {
+  if (document.querySelector(`.devices__check--js:checked`) == null) {
+    console.log(`if`);
+    document.querySelector(`.devices__check--other`).classList.remove(`devices__check--other--js`);
+  } else {
+    console.log(`else`);
+    document.querySelector(`.devices__check--other`).classList.toggle(`devices__check--other--js`);
+  }
+});
+
+
