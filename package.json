@@ -1,0 +1,23 @@
+{
+  "name": "myform",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PaszelkeDominik/myform.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PaszelkeDominik/myform/issues"
+  },
+  "homepage": "https://github.com/PaszelkeDominik/myform#readme",
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
