@@ -1,3 +1,13 @@
+$mobileS: 320 px;
+$mobileM: 375 px;
+$mobileL: 425 px;
+$tablet: 768 px;
+$laptop: 1024 px;
+$laptopL: 1440 px;
+@mixin justifyBetween {
+  display: flex;
+  justify-content: space-between;
+}
 html {
   box-sizing: border-box;
 }
@@ -9,65 +19,61 @@ html {
 body {
   background-color: #08aeea;
   background-image: linear-gradient(0deg, #08aeea 0%, #2af598 100%);
-  height: 100vh;  
+  height: 100vh;
   display: flex;
   justify-content: center;
 }
-
-.devices{
+.devices {
   border-style: none;
+  &__check {
+    margin: 5px 0;
+    &--other{
+      display: none;
+      margin-top: 10px;    
+    }
+    &--other--js{
+      display: block;
+    }
+  }
 }
-.devices__check{
-    margin:5px 0;
+.header {
+  color: purple;
 }
-.devices__check--other{
-  display: none;
-  margin-top: 10px;
-}
-.devices__check--other--js{
-  display: block;
-}
-.header{
-  color:purple;
-}
-.input{
+.input {
   margin-left: 16px;
 }
-
-.main{
+.main {
 }
-.personal__name, .personal__surname, .personal__mail, .personal__date, .personal__gender--gender, .personal__gender{
-  display: flex;
-  justify-content: space-between;
-
+.personal__name,
+.personal__surname,
+.personal__mail,
+.personal__date,
+.personal__gender--gender,
+.personal__gender {
+  @include justifyBetween();
 }
-
-.personal__gender--gender{
-  margin:0px;
+.personal__gender--gender {
+  margin: 0px;
   display: inline-block;
   width: auto;
-  
 }
-.personal{
+.personal {
   padding-bottom: 25px;
+  &__gender {
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    &--input {
+    }
+    &--label {
+    }
+    &--both {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      display: inline-block;
+      position: relative;
+      top: 10px;
+    }
+  }
 }
-.personal__gender{
- margin: 0;
- display: flex;
-  justify-content: flex-start;
-}
-.personal__gender--input{
-
-}
-.personal__gender--label{
-}
-.personal__gender--both{
-  /* width: 8px; */
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  display: inline-block;
-  position: relative;
-  top: 10px;
-}
-
